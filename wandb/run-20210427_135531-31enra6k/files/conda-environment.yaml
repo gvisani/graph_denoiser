@@ -1,0 +1,4 @@
+name: denoiser
+channels:
+  - defaults
+prefix: /Users/merden/anaconda3/envs/denoiser

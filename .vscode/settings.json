@@ -1,0 +1,8 @@
+{
+    "python.pythonPath": "/usr/local/Caskroom/miniconda/base/envs/denoiser/bin/python",
+    "cSpell.words": [
+        "Denoiser",
+        "networkx",
+        "toolz"
+    ]
+}

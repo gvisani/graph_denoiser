@@ -1,0 +1,33 @@
+2021-04-27 14:12:01,251 INFO    MainThread:14467 [internal.py:wandb_internal():88] W&B internal server running at pid: 14467, started at: 2021-04-27 14:12:01.251588
+2021-04-27 14:12:01,253 INFO    WriterThread:14467 [datastore.py:open_for_write():77] open: /Users/merden/Research/denoiser/wandb/run-20210427_141200-3shklas0/run-3shklas0.wandb
+2021-04-27 14:12:01,253 DEBUG   HandlerThread:14467 [handler.py:handle_request():120] handle_request: check_version
+2021-04-27 14:12:01,255 DEBUG   SenderThread:14467 [sender.py:send():160] send: header
+2021-04-27 14:12:01,255 DEBUG   SenderThread:14467 [sender.py:send():160] send: request
+2021-04-27 14:12:01,255 DEBUG   SenderThread:14467 [sender.py:send_request():169] send_request: check_version
+2021-04-27 14:12:01,355 DEBUG   SenderThread:14467 [sender.py:send():160] send: run
+2021-04-27 14:12:01,357 DEBUG   SenderThread:14467 [git.py:repo():33] git repository is invalid
+2021-04-27 14:12:01,512 INFO    SenderThread:14467 [sender.py:_start_run_threads():651] run started: 3shklas0 with start time 1619547120
+2021-04-27 14:12:01,513 DEBUG   SenderThread:14467 [sender.py:send():160] send: summary
+2021-04-27 14:12:01,513 INFO    SenderThread:14467 [sender.py:_save_file():781] saving file wandb-summary.json with policy end
+2021-04-27 14:12:01,516 DEBUG   HandlerThread:14467 [handler.py:handle_request():120] handle_request: run_start
+2021-04-27 14:12:01,520 DEBUG   HandlerThread:14467 [meta.py:__init__():39] meta init
+2021-04-27 14:12:01,520 DEBUG   HandlerThread:14467 [meta.py:__init__():53] meta init done
+2021-04-27 14:12:01,520 DEBUG   HandlerThread:14467 [meta.py:probe():210] probe
+2021-04-27 14:12:01,521 DEBUG   HandlerThread:14467 [git.py:repo():33] git repository is invalid
+2021-04-27 14:12:01,521 DEBUG   HandlerThread:14467 [meta.py:_save_pip():57] save pip
+2021-04-27 14:12:01,522 DEBUG   HandlerThread:14467 [meta.py:_save_pip():71] save pip done
+2021-04-27 14:12:01,522 DEBUG   HandlerThread:14467 [meta.py:_save_conda():78] save conda
+2021-04-27 14:12:02,765 DEBUG   HandlerThread:14467 [meta.py:_save_conda():86] save conda done
+2021-04-27 14:12:02,765 DEBUG   HandlerThread:14467 [meta.py:probe():252] probe done
+2021-04-27 14:12:02,769 DEBUG   SenderThread:14467 [sender.py:send():160] send: files
+2021-04-27 14:12:02,769 INFO    SenderThread:14467 [sender.py:_save_file():781] saving file wandb-metadata.json with policy now
+2021-04-27 14:12:02,774 DEBUG   HandlerThread:14467 [handler.py:handle_request():120] handle_request: status
+2021-04-27 14:12:02,774 DEBUG   SenderThread:14467 [sender.py:send():160] send: request
+2021-04-27 14:12:02,774 DEBUG   SenderThread:14467 [sender.py:send_request():169] send_request: status
+2021-04-27 14:12:03,186 WARNING MainThread:14467 [internal.py:wandb_internal():146] Internal process interrupt: 1
+2021-04-27 14:12:03,318 WARNING MainThread:14467 [internal.py:wandb_internal():146] Internal process interrupt: 2
+2021-04-27 14:12:03,318 ERROR   MainThread:14467 [internal.py:wandb_internal():149] Internal process interrupted.
+2021-04-27 14:12:03,772 INFO    WriterThread:14467 [datastore.py:close():258] close: /Users/merden/Research/denoiser/wandb/run-20210427_141200-3shklas0/run-3shklas0.wandb
+2021-04-27 14:12:03,777 INFO    HandlerThread:14467 [handler.py:finish():624] shutting down handler
+2021-04-27 14:12:03,911 INFO    SenderThread:14467 [sender.py:finish():884] shutting down sender
+2021-04-27 14:12:05,622 INFO    MainThread:14467 [internal.py:handle_exit():78] Internal process exited

@@ -1,0 +1,16 @@
+{
+    "os": "macOS-10.16-x86_64-i386-64bit",
+    "python": "3.8.8",
+    "heartbeatAt": "2021-04-27T18:13:59.428231",
+    "startedAt": "2021-04-27T18:13:58.337193",
+    "docker": null,
+    "cpu_count": 12,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "denoise.py",
+    "codePath": "denoise.py",
+    "host": "Merts-MacBook-Pro.local",
+    "username": "merden",
+    "executable": "/usr/local/Caskroom/miniconda/base/envs/denoiser/bin/python3"
+}

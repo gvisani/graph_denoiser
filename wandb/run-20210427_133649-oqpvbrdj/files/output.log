@@ -1,0 +1,1 @@
+TypeError: stack(): argument 'tensors' (position 1) must be tuple of Tensors, not Tensor
