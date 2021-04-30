@@ -123,18 +123,18 @@ class DenoiserMemory(torch.nn.Module):
 
         def test(x, y):
             return torch.cat([x, self.__assoc__[y].unsqueeze(0)])
-        # noise_vectors = list(
-        #     reduce(test, map(torch.LongTensor, noise), torch.zeros(0, 2, dtype=int)))
-        # noise = torch.stack(noise_vectors) if len(
-        #     noise_vectors) > 0 else torch.zeros(0, 2, dtype=int)
+        noise_vectors = list(
+            reduce(test, map(torch.LongTensor, noise), torch.zeros(0, 2, dtype=int)))
+        noise = torch.stack(noise_vectors) if len(
+            noise_vectors) > 0 else torch.zeros(0, 2, dtype=int)
 
         # Compute messages (src -> dst).
         msg_s, t_s, src_s, dst_s = self.__compute_msg__(
-            n_id, self.msg_s_store, self.msg_s_module, None)
+            n_id, self.msg_s_store, self.msg_s_module, noise)
 
         # Compute messages (dst -> src).
         msg_d, t_d, src_d, dst_d = self.__compute_msg__(
-            n_id, self.msg_d_store, self.msg_d_module, None)
+            n_id, self.msg_d_store, self.msg_d_module, noise)
 
         # Aggregate messages.
         idx = torch.cat([src_s, src_d], dim=0)
@@ -164,17 +164,16 @@ class DenoiserMemory(torch.nn.Module):
 
         src = torch.cat(src, dim=0)
         dst = torch.cat(dst, dim=0)
-        print(src.shape)
         t = torch.cat(t, dim=0)
         raw_msg = torch.cat(raw_msg, dim=0)
 
-        # src_dst = torch.stack((src, dst), dim=1)
-        # mask = torch.BoolTensor(
-        #     [False if edge in noise else True for edge in src_dst])
-        # src = src[mask]
-        # dst = dst[mask]
-        # t = t[mask]
-        # raw_msg = raw_msg[mask]
+        src_dst = torch.stack((src, dst), dim=1)
+        mask = torch.BoolTensor(
+            [False if edge in noise else True for edge in src_dst])
+        src = src[mask]
+        dst = dst[mask]
+        t = t[mask]
+        raw_msg = raw_msg[mask]
 
         t_rel = t - self.last_update[src]
         t_enc = self.time_enc(t_rel.to(raw_msg.dtype))

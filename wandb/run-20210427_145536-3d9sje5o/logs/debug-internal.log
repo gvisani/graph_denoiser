@@ -1,0 +1,81 @@
+2021-04-27 14:55:37,283 INFO    MainThread:15637 [internal.py:wandb_internal():88] W&B internal server running at pid: 15637, started at: 2021-04-27 14:55:37.283139
+2021-04-27 14:55:37,285 DEBUG   HandlerThread:15637 [handler.py:handle_request():120] handle_request: check_version
+2021-04-27 14:55:37,286 INFO    WriterThread:15637 [datastore.py:open_for_write():77] open: /Users/merden/Research/denoiser/wandb/run-20210427_145536-3d9sje5o/run-3d9sje5o.wandb
+2021-04-27 14:55:37,288 DEBUG   SenderThread:15637 [sender.py:send():160] send: header
+2021-04-27 14:55:37,289 DEBUG   SenderThread:15637 [sender.py:send():160] send: request
+2021-04-27 14:55:37,289 DEBUG   SenderThread:15637 [sender.py:send_request():169] send_request: check_version
+2021-04-27 14:55:37,389 DEBUG   SenderThread:15637 [sender.py:send():160] send: run
+2021-04-27 14:55:37,559 INFO    SenderThread:15637 [sender.py:_start_run_threads():651] run started: 3d9sje5o with start time 1619549736
+2021-04-27 14:55:37,559 DEBUG   SenderThread:15637 [sender.py:send():160] send: summary
+2021-04-27 14:55:37,560 INFO    SenderThread:15637 [sender.py:_save_file():781] saving file wandb-summary.json with policy end
+2021-04-27 14:55:37,560 DEBUG   HandlerThread:15637 [handler.py:handle_request():120] handle_request: run_start
+2021-04-27 14:55:37,566 DEBUG   HandlerThread:15637 [meta.py:__init__():39] meta init
+2021-04-27 14:55:37,567 DEBUG   HandlerThread:15637 [meta.py:__init__():53] meta init done
+2021-04-27 14:55:37,567 DEBUG   HandlerThread:15637 [meta.py:probe():210] probe
+2021-04-27 14:55:37,575 DEBUG   HandlerThread:15637 [meta.py:_setup_git():200] setup git
+2021-04-27 14:55:37,609 DEBUG   HandlerThread:15637 [meta.py:_setup_git():207] setup git done
+2021-04-27 14:55:37,609 DEBUG   HandlerThread:15637 [meta.py:_save_pip():57] save pip
+2021-04-27 14:55:37,610 DEBUG   HandlerThread:15637 [meta.py:_save_pip():71] save pip done
+2021-04-27 14:55:37,611 DEBUG   HandlerThread:15637 [meta.py:_save_conda():78] save conda
+2021-04-27 14:55:39,562 DEBUG   HandlerThread:15637 [meta.py:_save_conda():86] save conda done
+2021-04-27 14:55:39,563 DEBUG   HandlerThread:15637 [meta.py:probe():252] probe done
+2021-04-27 14:55:39,569 DEBUG   SenderThread:15637 [sender.py:send():160] send: files
+2021-04-27 14:55:39,570 INFO    SenderThread:15637 [sender.py:_save_file():781] saving file wandb-metadata.json with policy now
+2021-04-27 14:55:39,574 DEBUG   HandlerThread:15637 [handler.py:handle_request():120] handle_request: status
+2021-04-27 14:55:39,576 DEBUG   SenderThread:15637 [sender.py:send():160] send: request
+2021-04-27 14:55:39,576 DEBUG   SenderThread:15637 [sender.py:send_request():169] send_request: status
+2021-04-27 14:55:39,969 DEBUG   SenderThread:15637 [sender.py:send():160] send: files
+2021-04-27 14:55:39,969 INFO    SenderThread:15637 [sender.py:_save_file():781] saving file media/graph/graph_2_summary_6e4dc5c1.graph.json with policy now
+2021-04-27 14:55:39,970 DEBUG   SenderThread:15637 [sender.py:send():160] send: summary
+2021-04-27 14:55:39,971 INFO    SenderThread:15637 [sender.py:_save_file():781] saving file wandb-summary.json with policy end
+2021-04-27 14:55:39,974 DEBUG   SenderThread:15637 [sender.py:send():160] send: summary
+2021-04-27 14:55:39,975 INFO    SenderThread:15637 [sender.py:_save_file():781] saving file wandb-summary.json with policy end
+2021-04-27 14:55:39,980 DEBUG   SenderThread:15637 [sender.py:send():160] send: files
+2021-04-27 14:55:39,980 INFO    SenderThread:15637 [sender.py:_save_file():781] saving file media/graph/graph_0_summary_9bc06684.graph.json with policy now
+2021-04-27 14:55:39,980 DEBUG   SenderThread:15637 [sender.py:send():160] send: summary
+2021-04-27 14:55:39,981 INFO    SenderThread:15637 [sender.py:_save_file():781] saving file wandb-summary.json with policy end
+2021-04-27 14:55:39,990 DEBUG   SenderThread:15637 [sender.py:send():160] send: summary
+2021-04-27 14:55:39,991 INFO    SenderThread:15637 [sender.py:_save_file():781] saving file wandb-summary.json with policy end
+2021-04-27 14:55:39,991 DEBUG   SenderThread:15637 [sender.py:send():160] send: files
+2021-04-27 14:55:39,991 INFO    SenderThread:15637 [sender.py:_save_file():781] saving file media/graph/graph_1_summary_38c6492b.graph.json with policy now
+2021-04-27 14:55:39,992 DEBUG   SenderThread:15637 [sender.py:send():160] send: summary
+2021-04-27 14:55:39,992 INFO    SenderThread:15637 [sender.py:_save_file():781] saving file wandb-summary.json with policy end
+2021-04-27 14:55:39,993 DEBUG   SenderThread:15637 [sender.py:send():160] send: summary
+2021-04-27 14:55:39,993 INFO    SenderThread:15637 [sender.py:_save_file():781] saving file wandb-summary.json with policy end
+2021-04-27 14:55:39,997 DEBUG   SenderThread:15637 [sender.py:send():160] send: summary
+2021-04-27 14:55:40,000 INFO    SenderThread:15637 [sender.py:_save_file():781] saving file wandb-summary.json with policy end
+2021-04-27 14:55:40,000 DEBUG   SenderThread:15637 [sender.py:send():160] send: summary
+2021-04-27 14:55:40,001 INFO    SenderThread:15637 [sender.py:_save_file():781] saving file wandb-summary.json with policy end
+2021-04-27 14:55:40,001 DEBUG   SenderThread:15637 [sender.py:send():160] send: summary
+2021-04-27 14:55:40,002 INFO    SenderThread:15637 [sender.py:_save_file():781] saving file wandb-summary.json with policy end
+2021-04-27 14:55:40,002 DEBUG   SenderThread:15637 [sender.py:send():160] send: summary
+2021-04-27 14:55:40,003 INFO    SenderThread:15637 [sender.py:_save_file():781] saving file wandb-summary.json with policy end
+2021-04-27 14:55:40,003 DEBUG   SenderThread:15637 [sender.py:send():160] send: summary
+2021-04-27 14:55:40,004 INFO    SenderThread:15637 [sender.py:_save_file():781] saving file wandb-summary.json with policy end
+2021-04-27 14:55:40,004 DEBUG   SenderThread:15637 [sender.py:send():160] send: summary
+2021-04-27 14:55:40,004 INFO    SenderThread:15637 [sender.py:_save_file():781] saving file wandb-summary.json with policy end
+2021-04-27 14:55:40,004 DEBUG   SenderThread:15637 [sender.py:send():160] send: summary
+2021-04-27 14:55:40,005 INFO    SenderThread:15637 [sender.py:_save_file():781] saving file wandb-summary.json with policy end
+2021-04-27 14:55:40,005 DEBUG   SenderThread:15637 [sender.py:send():160] send: summary
+2021-04-27 14:55:40,006 INFO    SenderThread:15637 [sender.py:_save_file():781] saving file wandb-summary.json with policy end
+2021-04-27 14:55:40,006 DEBUG   SenderThread:15637 [sender.py:send():160] send: summary
+2021-04-27 14:55:40,006 INFO    SenderThread:15637 [sender.py:_save_file():781] saving file wandb-summary.json with policy end
+2021-04-27 14:55:40,006 DEBUG   SenderThread:15637 [sender.py:send():160] send: summary
+2021-04-27 14:55:40,007 INFO    SenderThread:15637 [sender.py:_save_file():781] saving file wandb-summary.json with policy end
+2021-04-27 14:55:40,007 DEBUG   SenderThread:15637 [sender.py:send():160] send: summary
+2021-04-27 14:55:40,007 INFO    SenderThread:15637 [sender.py:_save_file():781] saving file wandb-summary.json with policy end
+2021-04-27 14:55:40,007 DEBUG   SenderThread:15637 [sender.py:send():160] send: summary
+2021-04-27 14:55:40,008 INFO    SenderThread:15637 [sender.py:_save_file():781] saving file wandb-summary.json with policy end
+2021-04-27 14:55:40,008 DEBUG   SenderThread:15637 [sender.py:send():160] send: summary
+2021-04-27 14:55:40,008 INFO    SenderThread:15637 [sender.py:_save_file():781] saving file wandb-summary.json with policy end
+2021-04-27 14:55:40,008 DEBUG   SenderThread:15637 [sender.py:send():160] send: summary
+2021-04-27 14:55:40,009 INFO    SenderThread:15637 [sender.py:_save_file():781] saving file wandb-summary.json with policy end
+2021-04-27 14:55:40,009 DEBUG   SenderThread:15637 [sender.py:send():160] send: summary
+2021-04-27 14:55:40,009 INFO    SenderThread:15637 [sender.py:_save_file():781] saving file wandb-summary.json with policy end
+2021-04-27 14:55:44,345 WARNING MainThread:15637 [internal.py:wandb_internal():146] Internal process interrupt: 1
+2021-04-27 14:55:45,525 WARNING MainThread:15637 [internal.py:wandb_internal():146] Internal process interrupt: 2
+2021-04-27 14:55:45,525 ERROR   MainThread:15637 [internal.py:wandb_internal():149] Internal process interrupted.
+2021-04-27 14:55:46,373 INFO    HandlerThread:15637 [handler.py:finish():624] shutting down handler
+2021-04-27 14:55:46,373 INFO    SenderThread:15637 [sender.py:finish():884] shutting down sender
+2021-04-27 14:55:46,374 INFO    WriterThread:15637 [datastore.py:close():258] close: /Users/merden/Research/denoiser/wandb/run-20210427_145536-3d9sje5o/run-3d9sje5o.wandb
+2021-04-27 14:55:47,693 INFO    MainThread:15637 [internal.py:handle_exit():78] Internal process exited

@@ -68,6 +68,7 @@ def train():
         for S1, S2 in combinations(subgraphs, 2):
             print('round start')
             optimizer.zero_grad()
+            # region learning_by_augmentation.
             S_1_aug, S_2_aug, y = augment(
                 S1[1][1], S1[1][0], S2[1][1], S2[1][0], G_noisy, C)
             n_id = torch.cat([S1[1][0], S2[1][0]]).unique()
@@ -94,13 +95,6 @@ def train():
             truth = torch.empty(n_id.size(0), n_id.size(0)).fill_(np.nan)
             for n1, n2 in y:
                 truth[assoc[n1], assoc[n2]] = 1.0
-
-            def nanmean(v, *args, inplace=False, **kwargs):
-                if not inplace:
-                    v = v.clone()
-                is_nan = torch.isnan(v)
-                v[is_nan] = 0
-                return v.sum(*args, **kwargs) / (~is_nan).float().sum(*args, **kwargs)
 
             n_id_combos_src = torch.combinations(
                 n_id, r=2, with_replacement=False)
@@ -150,25 +144,26 @@ def train():
             print("backpropping")
             loss /= num_pos
 
-            # loss = None
-            # for n1 in N_1:
-            #     for n2 in N_2:
-            #         # Check if is nan and compute loss depending n that.
-            #         if loss is None:
-            #             loss = (truth[n1, n2] - rel_node(
-            #                 mu_prime_G*(v_1 + z[n1]), mu_prime_G*(v_2 + z[n2])))**2
-            #         else:
-            #             loss = torch.nansum(torch.Tensor([loss, (truth[n1, n2] - rel_node(
-            #                 mu_prime_G*(v_1 + z[n1]), mu_prime_G*(v_2 + z[n2])))**2]))
-
-            # # loss = nanmean(torch.flatten((truth - mu_p)**2), inplace=True)
             loss.backward()
             optimizer.step()
             memory.detach()
-            print(loss)
+            # endregion
 
-            # for n1, n2 in y:
-            #     truth[assoc_s1[n1], assoc_s2[n2]] = 1.0
+            z, last_update = memory(n_id, y)
+            print(last_update)
+            z = gnn(z, last_update, torch.cat(
+                [assoc[S_1_aug], assoc[S_2_aug]], dim=1), i)
+            print('updating memory')
+            memory.update_state(torch.cat([S_1_aug[0], S_2_aug[0]]), torch.cat(
+                [S_1[1], S_2[1]]), torch.empty(S_1.size(1) + S_2.size(1)).fill_(i).type(torch.int64), torch.empty(S_1_aug.size(1) + S_2_aug.size(1), 0), y)
+
+            # assoc[n_id] = torch.arange(n_id.size(0), device=device)
+            v_1 = torch.sum(z[assoc[S1[1][0]]], 0) / S1[1][0].size(0)
+            v_2 = torch.sum(z[assoc[S2[1][0]]], 0) / S2[1][0].size(0)
+            mu_prime_G = rel_subgraph(v_1, v_2)
+            N_1, N_2 = assoc[n_id], assoc[n_id]
+            # assoc_s1[S1[1][0]] = torch.arange(S1[1][0].size(0), device=device)
+            # assoc_s2[S2[1][0]] = torch.arange(S2[1][0].size(0), device=device)
 
 
 if __name__ == "__main__":

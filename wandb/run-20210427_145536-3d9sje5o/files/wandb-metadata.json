@@ -1,0 +1,22 @@
+{
+    "os": "macOS-10.16-x86_64-i386-64bit",
+    "python": "3.8.8",
+    "heartbeatAt": "2021-04-27T18:55:37.567523",
+    "startedAt": "2021-04-27T18:55:36.279446",
+    "docker": null,
+    "cpu_count": 12,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "denoise.py",
+    "codePath": "denoise.py",
+    "git": {
+        "remote": null,
+        "commit": "7d2ec005156d3ae795c053e8400aeacbc43313fc"
+    },
+    "email": null,
+    "root": "/Users/merden/Research/denoiser",
+    "host": "Merts-MacBook-Pro.local",
+    "username": "merden",
+    "executable": "/usr/local/Caskroom/miniconda/base/envs/denoiser/bin/python3"
+}
