@@ -20,9 +20,10 @@ def getRandomStartingNxGraphs(n: int, c: int, noisy_e_count: int) -> (nx.Graph, 
        number of noisy edges in the network
     '''
     # Geometric Network, Relaxed Cavemen. Check networkx for community based graphs
-    G = nx.watts_strogatz_graph(n, 5, p=0.2)
+    G = nx.generators.community.relaxed_caveman_graph(n, 12, 0.2)
     G_noisy = G.copy()
     edges = list(G.edges)
+    assert (len(edges) > 0)
     nonedges = list(nx.non_edges(G))
     addOrRemoveEdge = addOrRemoveRandomEdgeWithAllEdges(edges)(nonedges)
     edge_operations = list(
@@ -35,12 +36,12 @@ def getRandomStartingNxGraphs(n: int, c: int, noisy_e_count: int) -> (nx.Graph, 
     c_true_confident_edges = random.sample(true_edges, c)
     for node in G_noisy.nodes():
         G_noisy.nodes[node]['degree'] = nx.degree(G, node)
-    return (G, G_noisy, list(c_true_confident_edges))
+    return (G, G_noisy, set(c_true_confident_edges))
 
 
 @toolz.curry
 def addOrRemoveRandomEdgeWithAllEdges(edges: nx.edges, nonedges: nx.edges, G: nx.Graph) -> (OpType, ("src", "dst")):
-    operation = random.choice(["add", "remove"])
+    operation = random.choice(["remove"])
     chosen_edge = random.choice(edges)
     if operation == "remove":
         return ("remove", chosen_edge)
